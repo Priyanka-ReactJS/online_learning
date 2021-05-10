@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+@import "./sass/variable.scss";
 
 * {
   margin: 0;
@@ -8,27 +9,29 @@
 }
 
 .navbar {
-  background-color: #fff !important;
+  background-color: $brandbg-clr !important;
+
+  .navbar-brand {
+    font-size: 1.9rem !important;
+    color: $brand-clr;
+  }
+  
+  & a {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+  
+  .menu_active {
+    font-weight: bold;
+    border-bottom: 1px solid $brand-clr;
+  }
+  
+  & a:hover {
+    color: $brandname-clr !important;
+  }
 }
 
-.navbar-brand {
-  font-size: 1.9rem !important;
-  color: #565387 !important;
-}
 
-.navbar a {
-  font-size: 1.3rem;
-  text-transform: capitalize;
-}
-
-.menu_active {
-  font-weight: bold;
-  border-bottom: 1px solid #565387;
-}
-
-.navbar a:hover {
-  color: #3498db !important;
-}
 
 @media (max-width: 991px) {
   .navbar-brand {
@@ -59,7 +62,7 @@
 }
 
 #header .brand-name {
-  color: #3498db;
+  color: $brandname-clr;
 }
 
 #header h2 {
@@ -75,17 +78,17 @@
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: #3498db;
-  border: 2px solid #3498db;
+  color: $brandname-clr;
+  border: 2px solid $brandname-clr;
   text-decoration: none;
 }
 
 #header .btn-get-started:hover {
-  background: #3498db;
-  color: #fff;
+  background: $brandname-clr;
+  color: $brandbg-clr;
 }
 
-.header-img {
+.header-img { 
   text-align: right;
 }
 
